@@ -3,5 +3,9 @@
 @section('title', 'Home')
 
 @section('navbar')
-  <h1>test</h1>
+@parent
+@endsection
+
+@section('content')
+
 @endsection

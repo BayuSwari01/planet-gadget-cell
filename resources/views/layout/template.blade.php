@@ -154,7 +154,6 @@
         </div>
         <div class="col" style="background-color: #5F6F94; height: 1000px">
           @yield('content')
-          One of three columns
         </div>
       </div>
     </div>

@@ -29,7 +29,7 @@
       }
       
       .contentC {
-        padding: 0 0px;
+        padding: 0px 0px;
         display: none;
         overflow: hidden;
         background-color: #25316D;
@@ -66,16 +66,18 @@
     @section('navbar')
     <nav class="navbar navbar-expand-lg " style="background-color: #97D2EC">
       <div class="row container-fluid">
-          <div class="col-3 text-start text-white">
+          <div class="col-3 text-start text-white" style="margin-left: 20px;font-size: 20px">
             Kategori
           </div>
           <div class="col-6 text-center text-white" style="font-size: 25px; font-weight: bolder ">
             Planet Gadget Cell Surabaya
           </div>
           <div class="col-3 justify-content-end">
-            <form class="d-flex" role="search">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+            <form class="d-flex" role="search" style="background-color: white; border-radius: 50px">
+              <div>
+                <img src="{{ asset('images/search.png') }}" width="25" height="25" style="margin:5px">
+              </div>
+              <input type="search" placeholder="Search" aria-label="Search" style="border: none; outline: none">
             </form>
           </div>
       </div>
@@ -86,28 +88,69 @@
     <div class="container-fluid text-start">
       <div class="row align-items-start">
         <div class="col-2" style="background-color: #25316D; height: 1000px">
-          <button type="button" class="collapsible text-white">Hp Terbaru</button>
+          <button type="button" class="collapsible text-white">
+            <img src="{{ asset('images/panah.png') }}" width="25">
+            Hp Terbaru
+          </button>
           <div class="contentC text-white">
             <ul>
-              <li><button type="button" class="text-white hp" onclick="location.href='{{url('test')}}'">Iphone</button></li>
-              <li><button type="button" class="text-white hp" onclick="location.href='{{url('test')}}'">Xiaomi</button></li>
-              <li><button type="button" class="text-white hp" onclick="location.href='{{url('test')}}'">Oppo</button></li>
-              <li><button type="button" class="text-white hp" onclick="location.href='{{url('test')}}'">Samsung</button></li>
-              <li><button type="button" class="text-white hp" onclick="location.href='{{url('test')}}'">Vivo</button></li>
+              <li>
+                  <button type="button" class="text-white hp" onclick="location.href='{{url('test')}}'">
+                    <img src="{{ asset('images/panah.png') }}" width="25">
+                    Iphone
+                  </button>
+              </li>
+              <li>
+                <button type="button" class="text-white hp" onclick="location.href='{{url('test')}}'">
+                  <img src="{{ asset('images/panah.png') }}" width="25">
+                  Xiaomi
+                </button>
+              </li>
+              <li>
+                <button type="button" class="text-white hp" onclick="location.href='{{url('test')}}'">
+                  <img src="{{ asset('images/panah.png') }}" width="25">
+                  Oppo
+                </button>
+              </li>
+              <li>
+                <button type="button" class="text-white hp" onclick="location.href='{{url('test')}}'">
+                  <img src="{{ asset('images/panah.png') }}" width="25">
+                  Samsung
+                </button>
+              </li>
+              <li>
+                <button type="button" class="text-white hp" onclick="location.href='{{url('test')}}'">
+                  <img src="{{ asset('images/panah.png') }}" width="25">
+                  Vivo
+                </button>
+              </li>
             </ul>
           </div>
-          <button type="button" class="collapsible text-white">Hp Terbaik</button>
+
+          <button type="button" class="collapsible text-white">
+            <img src="{{ asset('images/panah.png') }}" width="25">
+            Hp Terbaik
+          </button>
           <div class="contentC text-white">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
-          <button type="button" class="collapsible text-white">Daftar Harga</button>
+
+          <button type="button" class="collapsible text-white">
+            <img src="{{ asset('images/panah.png') }}" width="25">
+            Daftar Harga
+          </button>
           <div class="contentC text-white">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
-          <button type="button" class="collapsible text-white">Spesifikasi Hp</button>
+
+          <button type="button" class="collapsible text-white">
+            <img src="{{ asset('images/panah.png') }}" width="25">
+            Spesifikasi Hp
+          </button>
           <div class="contentC text-white">
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
+
         </div>
         <div class="col" style="background-color: #5F6F94; height: 1000px">
           @yield('content')

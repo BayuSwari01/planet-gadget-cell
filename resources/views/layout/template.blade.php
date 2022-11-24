@@ -151,6 +151,29 @@
               <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
 
+          <button type="button" class="collapsible text-white">
+            <img src="{{ asset('images/panah.png') }}" width="25">
+            About
+          </button>
+          <div class="contentC text-white">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+
+          <button type="button" class="collapsible text-white">
+            <img src="{{ asset('images/panah.png') }}" width="25">
+            Contact
+          </button>
+          <div class="contentC text-white">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+
+          <button type="button" class="collapsible text-white">
+            <img src="{{ asset('images/panah.png') }}" width="25">
+            Desclaimer
+          </button>
+          <div class="contentC text-white">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
         </div>
         <div class="col" style="background-color: #5F6F94; height: 1000px">
           @yield('content')

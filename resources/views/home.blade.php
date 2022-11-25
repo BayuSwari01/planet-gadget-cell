@@ -13,7 +13,7 @@
     </div>
 
     <div class="d-flex flex-wrap">
-        @for ($i = 0; $i < 3; $i++)
+        @for ($i = 0; $i < 4; $i++)
             <div class="card" style="width: 18rem;margin: 10px">
                 <img src="https://images.samsung.com/is/image/samsung/p6pim/id/feature/142571366/id-feature---470701928?$FB_TYPE_A_MO_JPG$" class="card-img-top" alt="..." height="200" width="200">
                 <div class="card-body">

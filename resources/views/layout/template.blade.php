@@ -21,6 +21,21 @@
         font-size: 15px;
         border-radius: 50px;
       }
+
+      .noCollapsible {
+        margin-top: 10px;
+        background-color: #3C4EA6;
+        color: #444;
+        cursor: pointer;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline-color: white;
+        outline-style: solid;
+        font-size: 15px;
+        border-radius: 50px;
+      }
       
       .active, .collapsible:hover {
         background-color: #3C4EA6;
@@ -61,15 +76,15 @@
       }
     </style>
   </head>
-  <body>
+  <body style="background-color: #5F6F94;">
     {{-- Nav bar --}}
     @section('navbar')
-    <nav class="navbar navbar-expand-lg " style="background-color: #97D2EC">
+    <nav class="navbar navbar-expand-lg " style="background-color: #97D2EC; position: fixed; width: 100%; z-index: 5; height: 55px">
       <div class="row container-fluid">
           <div class="col-3 text-start text-white" style="margin-left: 20px;font-size: 20px">
             Kategori
           </div>
-          <div class="col-6 text-center text-white" style="font-size: 25px; font-weight: bolder ">
+          <div class="col-6 text-center text-white" style="font-size: 25px; font-weight: bolder" onclick="location.href='{{url('home')}}'">
             Planet Gadget Cell Surabaya
           </div>
           <div class="col-3 justify-content-end">
@@ -87,7 +102,7 @@
     {{-- body page --}}
     <div class="container-fluid text-start">
       <div class="row align-items-start">
-        <div class="col-2" style="background-color: #25316D; height: 1000px">
+        <div class="col-2" style="background-color: #25316D; position: fixed; height: 100%; margin-top: 55px; width: 230px">
           <button type="button" class="collapsible text-white">
             <img src="{{ asset('images/panah.png') }}" width="25">
             Hp Terbaru
@@ -95,7 +110,7 @@
           <div class="contentC text-white">
             <ul>
               <li>
-                  <button type="button" class="text-white hp" onclick="location.href='{{url('test')}}'">
+                  <button type="button" class="text-white hp" onclick="location.href='{{url('handphone')}}'">
                     <img src="{{ asset('images/panah.png') }}" width="25">
                     Iphone
                   </button>
@@ -127,55 +142,32 @@
             </ul>
           </div>
 
-          <button type="button" class="collapsible text-white">
+          <button type="button" class="noCollapsible text-white" onclick="location.href='{{url('content')}}'">
             <img src="{{ asset('images/panah.png') }}" width="25">
             Hp Terbaik
           </button>
-          <div class="contentC text-white">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
 
-          <button type="button" class="collapsible text-white">
+          <button type="button" class="noCollapsible text-white" onclick="location.href='{{url('news')}}'">
             <img src="{{ asset('images/panah.png') }}" width="25">
-            Daftar Harga
+            News
           </button>
-          <div class="contentC text-white">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
 
-          <button type="button" class="collapsible text-white">
-            <img src="{{ asset('images/panah.png') }}" width="25">
-            Spesifikasi Hp
-          </button>
-          <div class="contentC text-white">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
-
-          <button type="button" class="collapsible text-white">
+          <button type="button" class="noCollapsible text-white">
             <img src="{{ asset('images/panah.png') }}" width="25">
             About
           </button>
-          <div class="contentC text-white">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
 
-          <button type="button" class="collapsible text-white">
+          <button type="button" class="noCollapsible text-white">
             <img src="{{ asset('images/panah.png') }}" width="25">
             Contact
           </button>
-          <div class="contentC text-white">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
 
-          <button type="button" class="collapsible text-white">
+          <button type="button" class="noCollapsible text-white">
             <img src="{{ asset('images/panah.png') }}" width="25">
             Desclaimer
           </button>
-          <div class="contentC text-white">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          </div>
         </div>
-        <div class="col" style="background-color: #5F6F94; height: 1000px">
+        <div class="col" style="height: 100%; margin-top: 55px; margin-left: 230px">
           @yield('content')
         </div>
       </div>

@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HandphoneController;
+use App\Http\Controllers\NewsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,10 +23,15 @@ Route::get('/home', function () {
     return view('home');
 });
 
+Route::get('/handphone', [HandphoneController::class, 'show']);
+
+Route::get('/news', [NewsController::class, 'show']);
+
 Route::get('/content', function () {
     return view('content');
 });
 
+// ini ga ada
 Route::get('/about', function () {
     return view('about');
 });

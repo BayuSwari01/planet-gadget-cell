@@ -11,4 +11,10 @@ class NewsController extends Controller
         $news = News::all();
         return view('news', ['news' => $news]);
     }
+
+    public function showBerita($id) {
+        $news = News::find($id);
+        $pecah = explode("\n", $news->isi_berita);
+        return view('berita', ['news' => $news, 'pecah' => $pecah]);
+    }
 }

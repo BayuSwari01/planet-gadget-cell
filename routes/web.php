@@ -23,9 +23,10 @@ Route::get('/home', function () {
     return view('home');
 });
 
-Route::get('/handphone', [HandphoneController::class, 'show']);
+Route::get('/handphone/{brand}', [HandphoneController::class, 'show']);
 
 Route::get('/news', [NewsController::class, 'show']);
+Route::get('/news/{id}', [NewsController::class, 'showBerita']);
 
 Route::get('/content', function () {
     return view('content');

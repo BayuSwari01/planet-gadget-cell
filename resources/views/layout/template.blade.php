@@ -66,6 +66,14 @@
         background-color: #3C4EA6;
       }
 
+      .menu:hover {
+        background-color: #25316D;
+      }
+
+      .card:hover {
+        border: 3px solid white;
+      }
+
       li{
         list-style: none;
       }
@@ -84,7 +92,7 @@
           <div class="col-3 text-start text-white" style="margin-left: 20px;font-size: 20px">
             Kategori
           </div>
-          <div class="col-6 text-center text-white" style="font-size: 25px; font-weight: bolder" onclick="location.href='{{url('home')}}'">
+          <div class="col-6 text-center text-white" style="font-size: 25px; font-weight: bolder; cursor: pointer" onclick="location.href='{{url('home')}}'">
             Planet Gadget Cell Surabaya
           </div>
           <div class="col-3 justify-content-end">
@@ -103,38 +111,38 @@
     <div class="container-fluid text-start">
       <div class="row align-items-start">
         <div class="col-2" style="background-color: #25316D; position: fixed; height: 100%; margin-top: 55px; width: 230px">
-          <button type="button" class="collapsible text-white">
+          <button type="button" class="collapsible text-white menu">
             <img src="{{ asset('images/panah.png') }}" width="25">
             Hp Terbaru
           </button>
           <div class="contentC text-white">
             <ul>
               <li>
-                  <button type="button" class="text-white hp" onclick="location.href='{{url('handphone')}}'">
+                  <button type="button" class="text-white hp" onclick="location.href='{{url('handphone/Apple')}}'">
                     <img src="{{ asset('images/panah.png') }}" width="25">
                     Iphone
                   </button>
               </li>
               <li>
-                <button type="button" class="text-white hp" onclick="location.href='{{url('test')}}'">
+                <button type="button" class="text-white hp" onclick="location.href='{{url('handphone/Xiaomi')}}'">
                   <img src="{{ asset('images/panah.png') }}" width="25">
                   Xiaomi
                 </button>
               </li>
               <li>
-                <button type="button" class="text-white hp" onclick="location.href='{{url('test')}}'">
+                <button type="button" class="text-white hp" onclick="location.href='{{url('handphone/Oppo')}}'">
                   <img src="{{ asset('images/panah.png') }}" width="25">
                   Oppo
                 </button>
               </li>
               <li>
-                <button type="button" class="text-white hp" onclick="location.href='{{url('test')}}'">
+                <button type="button" class="text-white hp" onclick="location.href='{{url('handphone/Samsung')}}'">
                   <img src="{{ asset('images/panah.png') }}" width="25">
                   Samsung
                 </button>
               </li>
               <li>
-                <button type="button" class="text-white hp" onclick="location.href='{{url('test')}}'">
+                <button type="button" class="text-white hp" onclick="location.href='{{url('handphone/Vivo')}}'">
                   <img src="{{ asset('images/panah.png') }}" width="25">
                   Vivo
                 </button>
@@ -142,27 +150,27 @@
             </ul>
           </div>
 
-          <button type="button" class="noCollapsible text-white" onclick="location.href='{{url('content')}}'">
+          <button type="button" class="noCollapsible text-white menu" onclick="location.href='{{url('content')}}'">
             <img src="{{ asset('images/panah.png') }}" width="25">
             Hp Terbaik
           </button>
 
-          <button type="button" class="noCollapsible text-white" onclick="location.href='{{url('news')}}'">
+          <button type="button" class="noCollapsible text-white menu" onclick="location.href='{{url('news')}}'">
             <img src="{{ asset('images/panah.png') }}" width="25">
             News
           </button>
 
-          <button type="button" class="noCollapsible text-white">
+          <button type="button" class="noCollapsible text-white menu">
             <img src="{{ asset('images/panah.png') }}" width="25">
             About
           </button>
 
-          <button type="button" class="noCollapsible text-white">
+          <button type="button" class="noCollapsible text-white menu">
             <img src="{{ asset('images/panah.png') }}" width="25">
             Contact
           </button>
 
-          <button type="button" class="noCollapsible text-white">
+          <button type="button" class="noCollapsible text-white menu">
             <img src="{{ asset('images/panah.png') }}" width="25">
             Desclaimer
           </button>

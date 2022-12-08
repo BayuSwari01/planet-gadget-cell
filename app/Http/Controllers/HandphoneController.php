@@ -7,8 +7,9 @@ use Illuminate\Http\Request;
 
 class HandphoneController extends Controller
 {
-    public function show() {
-        $handphone = Handphone::all();
-        return view('handphone', ['handphone' => $handphone]);
+    public function show($brand) {
+        // $handphone = Handphone::all();
+        $handphone = Handphone::where('brand', $brand)->get();
+        return view('handphone', ['handphone' => $handphone, 'brand' => $brand]);
     }
 }

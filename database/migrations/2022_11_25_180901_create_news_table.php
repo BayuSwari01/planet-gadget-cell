@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('judul', 20);
             $table->longText('isi_berita');
             $table->string('foto', 30);
+            $table->dateTime('tanggal');
             $table->timestamps();
         });
     }

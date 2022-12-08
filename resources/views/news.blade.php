@@ -14,10 +14,10 @@
 
     <div class="d-flex flex-wrap">
         @foreach ( $news as $n )
-            <div class="card" style="width: 18rem;margin: 10px">
+            <div class="card" style="width: 18rem;margin: 10px; cursor: pointer" onclick="location.href='{{url('/news', strval($n->id))}}'">
                 <img src="{{ asset('images/'.$n->foto) }}" class="card-img-top" alt="..." height="200" width="200">
                 <div class="card-body">
-                    <p class="card-text">{{ $n->id }} {{ $n->foto }}</p>
+                    <p class="card-text">{{ $n->judul }}</p>
                 </div>
             </div>
         @endforeach

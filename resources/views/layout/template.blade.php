@@ -96,11 +96,11 @@
             Planet Gadget Cell Surabaya
           </div>
           <div class="col-3 justify-content-end">
-            <form class="d-flex" role="search" style="background-color: white; border-radius: 50px">
+            <form class="d-flex" role="search" style="background-color: white; border-radius: 50px" action="/search" method="GET">
               <div>
                 <img src="{{ asset('images/search.png') }}" width="25" height="25" style="margin:5px">
               </div>
-              <input type="search" placeholder="Search" aria-label="Search" style="border: none; outline: none">
+              <input type="search" name="search" placeholder="Search" aria-label="Search" style="border: none; outline: none">
             </form>
           </div>
       </div>

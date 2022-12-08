@@ -19,14 +19,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/home', function () {
-    return view('home');
-});
+Route::get('/home', [NewsController::class, 'terbaru']);
 
 Route::get('/handphone/{brand}', [HandphoneController::class, 'show']);
+Route::get('/handphone/{brand}/{id}', [HandphoneController::class, 'showHp']);
 
 Route::get('/news', [NewsController::class, 'show']);
 Route::get('/news/{id}', [NewsController::class, 'showBerita']);
+
+Route::get('/search', [NewsController::class, 'search']);
 
 Route::get('/content', function () {
     return view('content');
